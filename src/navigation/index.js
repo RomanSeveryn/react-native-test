@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useContext} from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import AuthNavigator from './AuthNavigator';
 import HomePageNavigator from './HomePageNavigator';
 import DrawerNavigator from './DrawerNavigator';
+import { GlobalContext } from '../context/Provider';
 
-const AppContainer = () => {
-    const isLoggedIn = true;
+const AppNavContainer = () => {
+    // const isLoggedIn = true;
+    const {
+      authState: {isLoggedIn},
+    } = useContext(GlobalContext)
+
+    console.log('isLoggedIn!!!', isLoggedIn);
     return (
         <NavigationContainer>
             {isLoggedIn ? <DrawerNavigator/> : <AuthNavigator/>}
@@ -28,4 +34,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default AppContainer;
+export default AppNavContainer;

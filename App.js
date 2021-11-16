@@ -2,14 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import AppContainer from './src/navigation';
+import AppNavContainer from './src/navigation';
+import GlobalProvider from './src/context/Provider';
 
 
 export default function App() {
   return (
-   <AppContainer>
+    <GlobalProvider>
+         <AppNavContainer/>
+    </GlobalProvider>
 
-   </AppContainer>
     
   );
 }
