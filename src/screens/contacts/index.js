@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Container from '../../components';
+import Container from '../../components/container';
 
 const Contacts = ({ navigation, route, options, back, layout, progress, styleInterpolator  }) => {
     // console.log('navigation', navigation);

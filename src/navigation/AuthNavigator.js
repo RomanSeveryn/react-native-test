@@ -3,13 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Login from '../screens/login';
 
-
-const Login = () => {
-    return (
-        <Text>Hello Login</Text>
-    )
-}
 
 const SignUp = () => {
     return (
@@ -21,7 +16,7 @@ const SignUp = () => {
 const AuthNavigator = () => {
     const AuthStack = createStackNavigator()
     return (
-       <AuthStack.Navigator>
+       <AuthStack.Navigator screenOptions={{headerShown: false}}>
            <AuthStack.Screen name='Login' component={Login}/>
            <AuthStack.Screen name='SetSignUpting' component={SignUp}/>
        </AuthStack.Navigator>
