@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Container from '../../components';
 
 const Contacts = ({ navigation, route, options, back, layout, progress, styleInterpolator  }) => {
     // console.log('navigation', navigation);
@@ -10,7 +11,10 @@ const Contacts = ({ navigation, route, options, back, layout, progress, styleInt
     // console.log('progress', progress);
     // console.log('styleInterpolator', styleInterpolator);
     return (
-        <Text>Hello Contact</Text>
+        <Container style={{padding: 100}}>
+            <Text>Hello Contact</Text>
+        </Container>
+        
     )
 }
 
