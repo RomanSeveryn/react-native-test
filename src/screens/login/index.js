@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Container from '../../components/container';
 import Input from '../../components/input';
+import CustomButton from '../../components/customButton';
 
 
 const Login = () => {
@@ -26,6 +27,12 @@ const Login = () => {
             icon={<Text>HIDE</Text>}
             iconPosition="left"
       />
+
+      <CustomButton title="Submit" loading={true} disable={true} secondary/>
+      <CustomButton title="Click Me" secondary loading/>
+      <CustomButton title="Submit" loading={true} disable={true} primary/>
+      <CustomButton title="Submit" danger/>
+
         </Container>
     )
 }
